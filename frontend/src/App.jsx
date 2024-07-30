@@ -14,7 +14,7 @@ function App() {
   useEffect(()=>{
     (async()=>{
       try{
-        const res = await axios.get('http://localhost:3000/get/forms')
+        const res = await axios.get('https://form-creator-73ie.onrender.com/get/forms')
         dispatchForm({type: 'GET', payload: res.data})
       }catch(e){
         console.log(e.message)

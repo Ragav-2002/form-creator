@@ -38,11 +38,11 @@ function Form() {
     const formData = {heading, inputs}
     try{
         if(form){
-            const res = await axios.put(`http://localhost:3000/update/form/${form?._id}`, formData)
+            const res = await axios.put(`https://form-creator-73ie.onrender.com/update/form/${form?._id}`, formData)
             dispatchForm({type: 'EDIT', payload: res.data})
             navigate('/')
         }else{
-            const res = await axios.post(`http://localhost:3000/create/form`, formData)
+            const res = await axios.post(`https://form-creator-73ie.onrender.com/create/form`, formData)
             dispatchForm({type: 'CREATE', payload: res.data})
             navigate('/')
         }

@@ -9,7 +9,7 @@ function Home() {
     const navigate = useNavigate()
     const handleDelete = async(id) => {
         try{
-            const res = await axios.delete(`http://localhost:3000/delete/form/${id}`)
+            const res = await axios.delete(`https://form-creator-73ie.onrender.com/delete/form/${id}`)
             dispatchForm({type: 'DEL', payload: id})
             console.log(res.data.msg)
         }catch(e){
